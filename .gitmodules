@@ -1,0 +1,15 @@
+[submodule "3rd-party/ElementTransitions.js"]
+	path = 3rd-party/ElementTransitions.js
+	url = https://github.com/dan-silver/ElementTransitions.js.git
+[submodule "3rd-party/Snap.svg"]
+	path = 3rd-party/Snap.svg
+	url = https://github.com/adobe-webplatform/Snap.svg.git
+[submodule "3rd-party/Buttons"]
+	path = 3rd-party/Buttons
+	url = https://github.com/alexwolfe/Buttons.git
+[submodule "3rd-party/hashids.js"]
+	path = 3rd-party/hashids.js
+	url = https://github.com/ivanakimov/hashids.js.git
+[submodule "3rd-party/sweetalert"]
+	path = 3rd-party/sweetalert
+	url = https://github.com/t4t5/sweetalert.git
