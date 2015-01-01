@@ -13,3 +13,9 @@
 [submodule "3rd-party/sweetalert"]
 	path = 3rd-party/sweetalert
 	url = https://github.com/t4t5/sweetalert.git
+[submodule "mobile-apps/android"]
+	path = mobile-apps/android
+	url = https://github.com/DevManny/OpenFocus-android.git
+[submodule "mobile-apps/iOS"]
+	path = mobile-apps/iOS
+	url = https://github.com/DevManny/OpenFocus-iOS.git
