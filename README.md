@@ -1,4 +1,4 @@
-Focus
+OpenFocus
 ========
 
 ## Introduction
