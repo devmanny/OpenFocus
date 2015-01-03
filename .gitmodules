@@ -19,3 +19,12 @@
 [submodule "mobile-apps/iOS"]
 	path = mobile-apps/iOS
 	url = https://github.com/DevManny/OpenFocus-iOS.git
+[submodule "3rd-party/c3"]
+	path = 3rd-party/c3
+	url = https://github.com/masayuki0812/c3.git
+[submodule "3rd-party/d3"]
+	path = 3rd-party/d3
+	url = https://github.com/mbostock/d3
+[submodule "3rd-party/magic"]
+	path = 3rd-party/magic
+	url = https://github.com/miniMAC/magic.git
