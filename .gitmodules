@@ -28,3 +28,6 @@
 [submodule "3rd-party/magic"]
 	path = 3rd-party/magic
 	url = https://github.com/miniMAC/magic.git
+[submodule "3rd-party/c3-angular-sample"]
+	path = 3rd-party/c3-angular-sample
+	url = https://github.com/jettro/c3-angular-sample.git
