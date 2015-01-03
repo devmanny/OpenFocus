@@ -1,13 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using node.js <script>document.write(process.version)</script>.
-<progress value="80" max="100"></progress>  
-  </body>
-    <script type="text/javascript" src="js/3rd-party/hashids.min.js"></script>
-    <script type="text/javascript" src="js/hashids.config.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OpenFocus</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="stylesheet/3rd-party/buttons.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/3rd-party/c3.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/3rd-party/elementTransitions.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/3rd-party/magic.min.css">
+    <link rel="stylesheet" type="text/css" href="stylesheet/3rd-party/sweet-alert.css">
+</head>
+
+<body>
+
+    <div id="chart"></div>
+
+
+</body>
+
+<script type="text/javascript" src="javascript/3rd-party/jquery.js"></script>
+<script type="text/javascript" src="javascript/3rd-party/d3.min.js"></script>
+<script type="text/javascript" src="javascript/3rd-party/c3.min.js"></script>
+<script type="text/javascript" src="javascript/3rd-party/elementTransitions.js"></script>
+<script type="text/javascript" src="javascript/3rd-party/sweet-alert.min.js"></script>
+<script type="text/javascript" src="javascript/3rd-party/hashids.min.js"></script>
+
+
+<script type="text/javascript" src="js/hashids.config.js"></script>
+<script type="text/javascript">
+    sweetAlert("Ron, Roneo", "Hello, Ronald");
+    sweetAlert("Good job Ron, Roneo", "Atras muestro una grafica generada por C3 y OpenFocus", "success");
+
+    var chart = c3.generate({
+        bindto: '#chart',
+        data: {
+            columns: [
+                ['Nivel de trampa de ronald', 30, 200, 100, 400, 150, 550],
+                ['Nivel de trampa de manny', 2, 20, 10, 40, 15, 0]
+            ],
+            type: 'spline'
+        }
+    });
+</script>
+
 </html>
