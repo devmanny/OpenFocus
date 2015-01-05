@@ -31,3 +31,9 @@
 [submodule "3rd-party/c3-angular-sample"]
 	path = 3rd-party/c3-angular-sample
 	url = https://github.com/jettro/c3-angular-sample.git
+[submodule "3rd-party/meteor-ios"]
+	path = 3rd-party/meteor-ios
+	url = https://github.com/martijnwalraven/meteor-ios.git
+[submodule "3rd-party/android-ddp-client"]
+	path = 3rd-party/android-ddp-client
+	url = https://github.com/kenyee/android-ddp-client.git
