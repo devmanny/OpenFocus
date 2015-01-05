@@ -40,6 +40,3 @@
 [submodule "3rd-party/nomnoml"]
 	path = 3rd-party/nomnoml
 	url = https://github.com/skanaar/nomnoml.git
-[submodule "3rd-party/UmlCanvas"]
-	path = 3rd-party/UmlCanvas
-	url = https://github.com/christophevg/UmlCanvas.git
