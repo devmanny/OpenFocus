@@ -1,0 +1,40 @@
+<head>
+  <title>TodoS</title>
+</head>
+
+<body>
+  {{> header }}
+  {{> main }}
+</body>
+
+<template name="header">
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">Manny</a>
+    <div style="float: right">
+        {{> loginButtons align="right" }}
+    </div>
+  </div>
+</div>
+</template>
+
+<template name="main">
+<div class="container">
+    <div class="row">
+        <div class="span2">
+            <h3>coordenadas:</h3>
+            <ul>
+                {{#each control}}
+                    <div class="row">
+                    <li class="list-name pull-left">{{x}}, {{y}}</li>
+                    <i class="remove-list icon-minus-sign pull-right"></i>
+                    <i rel="popover" class="share-list {{ _id }} icon-share pull-right"></i>
+                    </div>
+                {{/each}}
+            </ul>
+
+        </div>
+
+    </div>
+</div>
+</template>

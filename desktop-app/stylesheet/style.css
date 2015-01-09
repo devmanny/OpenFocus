@@ -1,0 +1,5 @@
+#indicator {
+    z-index: 99999;
+    transition-property: left, top;
+    transition-duration: 0.5s, 0.5s;
+}

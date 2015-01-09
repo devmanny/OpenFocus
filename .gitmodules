@@ -40,3 +40,6 @@
 [submodule "3rd-party/nomnoml"]
 	path = 3rd-party/nomnoml
 	url = https://github.com/skanaar/nomnoml.git
+[submodule "3rd-party/meteor-ddp"]
+	path = 3rd-party/meteor-ddp
+	url = https://github.com/eddflrs/meteor-ddp.git

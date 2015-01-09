@@ -16,9 +16,11 @@
 
 <body>
 
+
     <div id="chart"></div>
 
 
+    <img src="images/indicator.png" id="indicator">
 </body>
 
 <script type="text/javascript" src="javascript/3rd-party/jquery.js"></script>
@@ -31,18 +33,59 @@
 
 <script type="text/javascript" src="js/hashids.config.js"></script>
 <script type="text/javascript">
-    sweetAlert("Ron, Roneo", "Hello, Ronald");
-    sweetAlert("Good job Ron, Roneo", "Atras muestro una grafica generada por C3 y OpenFocus", "success");
+    var Asteroid = require("asteroid");
 
-    var chart = c3.generate({
-        bindto: '#chart',
-        data: {
-            columns: [
-                ['Nivel de trampa de ronald', 30, 200, 100, 400, 150, 550],
-                ['Nivel de trampa de manny', 2, 20, 10, 40, 15, 0]
-            ],
-            type: 'spline'
-        }
+    var meteor = new Asteroid("localhost:3000");
+    meteor.subscribe("control");
+
+    var control, delay_helper, id;
+
+    meteor.on("connected", function () {
+
+        control = meteor.getCollection("control");
+
+        var evento = control.reactiveQuery({});
+        evento.on("change", function (a) {
+
+
+            delay_helper = 0;
+
+            console.log(control.reactiveQuery({}).result.length)
+            if (control.reactiveQuery({}).result.length == 0) {
+                control.insert({
+                    x: 0,
+                    y: 0,
+                });
+            }
+
+            console.log(control.reactiveQuery({}).result.length)
+
+            id = control.reactiveQuery({}).result[0];
+
+            window.onmousemove = function (a) {
+
+                if (delay_helper++ % 5 == 0) {
+
+                    control.update(id._id, {
+                        x: a.clientX,
+                        y: a.clientY
+                    });
+
+                    $("#indicator").css({
+                        top: a.clientY,
+                        left: a.clientX,
+                        position: "absolute",
+                        zIndex: 99999,
+                        transitionProperty: "left, top",
+                        transitionDuration: "0.5s, 0.5s"
+                    });
+
+                    if (delay_helper > 10000) {
+                        delay_helper = 0;
+                    };
+                }
+            };
+        });
     });
 </script>
 
